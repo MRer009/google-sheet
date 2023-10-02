@@ -36,7 +36,7 @@ function onCellFocus(e) {
         textColor :computedStyle.color,
         fontSize :computedStyle.fontSize
     }
-
+  highlightOptionButtonsOnFocus();
 }
 
 // made a commenFunction to makesure the option on active cell selected or not
@@ -58,7 +58,7 @@ function highlightOptionButtonsOnFocus(){
      // if (activeOptionsState.isBoldSelected) {
      //   boldButton.classList.remove("active-option");
      // }
-    toggleButtonsStyle(bold_btn, activeOptionsState.isBold);
+    toggleButtonsStyle(bold_btn, activeStatOption.isBold);
 
          // check if the selected cell is italic or not .
          // if (activeOptionsState.isItalicSelected) {
@@ -67,7 +67,7 @@ function highlightOptionButtonsOnFocus(){
         // } else {
          //   italicButton.classList.remove("active-option");
         // }
-    toggleButtonsStyle(italic_btn, activeOptionsState.isItalic);
+    toggleButtonsStyle(italic_btn, activeStatOption.isItalic);
 
         
           // check if the selected cell is underline or not .
@@ -78,8 +78,8 @@ function highlightOptionButtonsOnFocus(){
           // } else {
           //   underlinedButton.classList.remove("active-option");
           // }
-    toggleButtonsStyle(underline_btn, activeOptionsState.isUnderLine);
-    textAlignHighlightButton(activeOptionsState.textAlign);
+    toggleButtonsStyle(underline_btn, activeStatOption.isUnderLine);
+    textAlignHighlightButton(activeStatOption.textAlign);
 }
 
 function onClickBold(boldButton){
